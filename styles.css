@@ -1,24 +1,26 @@
+/* 1. Algemene basis instellingen */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-table {
-border-collapse: collapse; /* Haalt de dubbele lijnen weg */
-width: 100%;               /* Maakt de tabel zo breed als het scherm */
-background-color: rgb(197, 197, 197)
+
+body {
+  font-family: Arial, sans-serif; /* Maakt tekst overal strak en leesbaar */
+  font-size: 16px;                /* Perfecte basisgrootte voor mobiel én pc */
+  line-height: 1.5;
 }
-th, td {
-padding: 10px;             /* Geeft 10 pixels ruimte rondom de tekst */
+
+/* 2. Navigatiemenu (Knoppen) */
+nav {
+  padding: 10px;
+  background-color: #f4f4f4;      /* Geeft de balk achter de knoppen een lichte kleur */
 }
-th {
-background-color: #0077b6; /* Dit is de kleurcode voor blauw */
-color: white;              /* Maakt de tekstkleur wit */
-}
+
 nav a {
   display: inline-block;
-  padding: 5px 10px;
-  margin-right: 10px;
+  padding: 12px 18px;             /* Grotere knoppen: makkelijker aan te tikken met een vinger */
+  margin: 5px;                    /* Ruimte rondom de knoppen zodat ze niet overlappen */
   background-color: #0e2531;
   color: white;
   text-decoration: none;
@@ -27,4 +29,38 @@ nav a {
 
 nav a:hover {
   background-color: #005f8d;
+}
+
+/* 3. Tabellen (Responsive gemaakt) */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  background-color: rgb(197, 197, 197);
+  margin-top: 15px;
+}
+
+th, td {
+  padding: 12px 10px;             /* Iets meer ademruimte voor de tekst */
+  text-align: left;               /* Lijn de tekst netjes links uit */
+}
+
+th {
+  background-color: #0077b6;
+  color: white;
+}
+
+/* 4. SPECIALE CODE VOOR DE GSM (Schermen kleiner dan 600px) */
+@media (max-width: 600px) {
+  nav a {
+    display: block;               /* Knoppen komen op gsm netjes onder elkaar te staan */
+    text-align: center;           /* Tekst in het midden van de knop */
+    margin: 5px 0;
+  }
+
+  /* Zorgt dat de tabel horizontaal kan scrollen als hij te breed is voor het gsm-scherm */
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
 }
