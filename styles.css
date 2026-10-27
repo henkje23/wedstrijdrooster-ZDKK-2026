@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+table {
+border-collapse: collapse; /* Haalt de dubbele lijnen weg */
+width: 100%;               /* Maakt de tabel zo breed als het scherm */
+background-color: rgb(197, 197, 197)
+}
+th, td {
+padding: 10px;             /* Geeft 10 pixels ruimte rondom de tekst */
+}
+th {
+background-color: #0077b6; /* Dit is de kleurcode voor blauw */
+color: white;              /* Maakt de tekstkleur wit */
+}
+nav a {
+  display: inline-block;
+  padding: 5px 10px;
+  margin-right: 10px;
+  background-color: #0e2531;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+nav a:hover {
+  background-color: #005f8d;
+}
